@@ -10,20 +10,29 @@
 </head>
 <body>
 
+<!-- LOADING SCREEN -->
+<div id="loading-screen" class="loading-screen">
+  <div class="loading-content">
+    <img src="/images/logo.png" alt="Hellena Hospital" class="loading-logo">
+    <p>Loading...</p>
+  </div>
+</div>
+
 <!-- NAV -->
 <nav>
   <a class="nav-logo" onclick="showPage('home')">
     <div class="nav-caduceus"><img src="/images/logo.png" alt="Hellena Hospital Logo" style="width:40px;height:40px;object-fit:contain;filter:drop-shadow(0 0 8px rgba(200,146,42,0.4)) drop-shadow(0 0 4px rgba(139,0,0,0.2));"></div>
     <span class="nav-logo-text"><em>Hellena</em> Hospital</span>
   </a>
-  <ul class="nav-links">
-    <li><a onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
-    <li><a onclick="showPage('about')" id="nav-about">About</a></li>
-    <li><a onclick="showPage('services')" id="nav-services">Services</a></li>
-    <li><a onclick="showPage('facilities')" id="nav-facilities">Facilities</a></li>
-    <li><a onclick="showPage('patient')" id="nav-patient">Patient Info</a></li>
-    <li><a onclick="showPage('blog')" id="nav-blog">Health Tips</a></li>
-    <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+  <button class="nav-burger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a onclick="showPage('home'); toggleMenu();" id="nav-home" class="active">Home</a></li>
+    <li><a onclick="showPage('about'); toggleMenu();" id="nav-about">About</a></li>
+    <li><a onclick="showPage('services'); toggleMenu();" id="nav-services">Services</a></li>
+    <li><a onclick="showPage('facilities'); toggleMenu();" id="nav-facilities">Facilities</a></li>
+    <li><a onclick="showPage('patient'); toggleMenu();" id="nav-patient">Patient Info</a></li>
+    <li><a onclick="showPage('blog'); toggleMenu();" id="nav-blog">Health Tips</a></li>
+    <li><a onclick="showPage('contact'); toggleMenu();" id="nav-contact">Contact</a></li>
   </ul>
   <div class="nav-actions">
     <button class="nav-emg" onclick="showPage('emergency')"><i class="fas fa-bell"></i> Emergency</button>
@@ -57,6 +66,23 @@
 
 <script src="js/script.js"></script>
 <script>
+// Loading screen
+function hideLoadingScreen() {
+  const screen = document.getElementById('loading-screen');
+  if (screen) {
+    screen.style.opacity = '0';
+    setTimeout(() => screen.style.display = 'none', 500);
+  }
+}
+
+// Toggle mobile menu
+function toggleMenu() {
+  const links = document.getElementById('nav-links');
+  if (links) {
+    links.classList.toggle('active');
+  }
+}
+
 // Load all pages on document ready
 document.addEventListener('DOMContentLoaded', async function() {
   const pages = ['home', 'about', 'services', 'facilities', 'patient', 'blog', 'emergency', 'contact'];
@@ -74,6 +100,9 @@ document.addEventListener('DOMContentLoaded', async function() {
   
   // Show home page by default
   showPage('home');
+  
+  // Hide loading screen after all pages loaded
+  hideLoadingScreen();
 });
 </script>
 
