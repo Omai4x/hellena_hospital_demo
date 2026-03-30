@@ -1,0 +1,69 @@
+<!-- ══════════════════════════
+     PATIENT INFO PAGE
+══════════════════════════ -->
+<div class="page" id="page-patient">
+  <div class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a onclick="showPage('home')" class="breadcrumb-home">Home</a><span class="sep">›</span><span class="active">Patient Information</span></div>
+      <span class="section-label">For Patients</span>
+      <h1>Patient <span>Information</span></h1>
+      <p>Everything you need to know before, during, and after your visit to Hellena Hospital.</p>
+    </div>
+  </div>
+  <section style="background:var(--warm-white);">
+    <div class="container">
+      <div class="ptabs">
+        <button class="ptab active" onclick="switchTab(this,'tab-faq')">FAQs</button>
+        <button class="ptab" onclick="switchTab(this,'tab-admission')">Admission Process</button>
+        <button class="ptab" onclick="switchTab(this,'tab-rights')">Patient Rights</button>
+        <button class="ptab" onclick="switchTab(this,'tab-prepare')">Preparing for a Visit</button>
+      </div>
+
+      <div class="ptab-content active" id="tab-faq" style="max-width:760px;">
+        <div class="acc"><div class="acc-hd" onclick="ta(this)">What are the hospital's opening hours? <span class="acc-icon">+</span></div><div class="acc-bd"><p>Hellena Hospital operates <strong>24 hours a day, 7 days a week</strong>, including public holidays. Scheduled outpatient clinics run 8:00 AM – 6:00 PM weekdays and 9:00 AM – 2:00 PM Saturdays.</p></div></div>
+        <div class="acc"><div class="acc-hd" onclick="ta(this)">Do I need an appointment? <span class="acc-icon">+</span></div><div class="acc-bd"><p>Walk-in patients are welcome at any time. However, booking in advance is recommended to reduce waiting time. Call <strong>+2349164474223</strong> or <strong>+2348026269356</strong>.</p></div></div>
+        <div class="acc"><div class="acc-hd" onclick="ta(this)">What should I bring on my first visit? <span class="acc-icon">+</span></div><div class="acc-bd"><p>Bring a valid ID, any previous medical records or test results, a list of current medications, and your health insurance card if applicable.</p></div></div>
+        <div class="acc"><div class="acc-hd" onclick="ta(this)">Do you accept health insurance? <span class="acc-icon">+</span></div><div class="acc-bd"><p>We are expanding our insurance partnerships. Please call our front desk to enquire about your specific insurer before your visit.</p></div></div>
+        <div class="acc"><div class="acc-hd" onclick="ta(this)">What payment methods do you accept? <span class="acc-icon">+</span></div><div class="acc-bd"><p>We accept <strong>cash</strong> and <strong>bank transfers</strong>. Speak to our billing desk upon arrival.</p></div></div>
+        <div class="acc"><div class="acc-hd" onclick="ta(this)">Are visiting hours restricted for inpatients? <span class="acc-icon">+</span></div><div class="acc-bd"><p>Standard visiting hours are <strong>10:00 AM – 12:00 PM</strong> and <strong>4:00 PM – 7:00 PM</strong> daily. These may vary by ward. Check with the nursing station on arrival.</p></div></div>
+        <div class="acc"><div class="acc-hd" onclick="ta(this)">Is parking available? <span class="acc-icon">+</span></div><div class="acc-bd"><p>Yes. Parking is available on the hospital premises at 60B Gas Line, Ohuru Isimiri. Our security team will direct you on arrival.</p></div></div>
+      </div>
+
+      <div class="ptab-content" id="tab-admission" style="max-width:700px;">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.45rem;margin-bottom:.45rem;">How Admission Works</h3>
+        <p style="color:var(--muted);margin-bottom:2.4rem;font-size:.9rem;">We aim to make the admission process as smooth and stress-free as possible.</p>
+        <div class="adm-steps">
+          <div class="adm-step"><div class="adm-n">1</div><div><h4>Arrive at Reception</h4><p>Come to the front desk. Our staff will take your details and guide you through registration. Bring your ID and any relevant medical documents.</p></div></div>
+          <div class="adm-step"><div class="adm-n">2</div><div><h4>Triage / Initial Assessment</h4><p>A nurse will assess your condition to determine priority of care. Emergency cases are seen immediately; routine cases are seen in order of arrival.</p></div></div>
+          <div class="adm-step"><div class="adm-n">3</div><div><h4>Doctor Consultation</h4><p>A qualified doctor will conduct a thorough examination and recommend the appropriate course of action — tests, medication, or admission.</p></div></div>
+          <div class="adm-step"><div class="adm-n">4</div><div><h4>Investigations (if required)</h4><p>If tests are needed, our in-house lab runs diagnostics. Results for most standard tests are available within the same visit.</p></div></div>
+          <div class="adm-step"><div class="adm-n">5</div><div><h4>Treatment & Ward Assignment</h4><p>If inpatient care is needed, you'll be assigned to the appropriate ward and a care plan initiated immediately.</p></div></div>
+          <div class="adm-step"><div class="adm-n">6</div><div><h4>Billing & Discharge</h4><p>Our billing team works with you transparently. Discharge planning begins early so you can transition home safely and confidently.</p></div></div>
+        </div>
+      </div>
+
+      <div class="ptab-content" id="tab-rights">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.45rem;margin-bottom:.45rem;">Your Rights as a Patient</h3>
+        <p style="color:var(--muted);margin-bottom:2.4rem;font-size:.9rem;">Hellena Hospital is committed to upholding the dignity and rights of every patient.</p>
+        <div class="rights-grid">
+          <div class="right-card"><h4>Right to Respectful Care</h4><p>Receive care that is considerate and free from discrimination based on age, gender, tribe, religion, or socioeconomic status.</p></div>
+          <div class="right-card"><h4>Right to Information</h4><p>Receive complete, understandable information about your diagnosis, treatment options, and prognosis to make informed decisions.</p></div>
+          <div class="right-card"><h4>Right to Confidentiality</h4><p>Your medical information is strictly confidential. We will not disclose your details without consent, except where required by law.</p></div>
+          <div class="right-card"><h4>Right to Refuse Treatment</h4><p>You may refuse any procedure or treatment, after being fully informed of the consequences of that decision.</p></div>
+          <div class="right-card"><h4>Right to Privacy</h4><p>You are entitled to privacy during examinations, procedures, and discussions about your health.</p></div>
+          <div class="right-card"><h4>Right to Complain</h4><p>If dissatisfied with any aspect of your care, you have the right to raise a complaint with our Patient Relations desk at any time.</p></div>
+        </div>
+      </div>
+
+      <div class="ptab-content" id="tab-prepare" style="max-width:720px;">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.45rem;margin-bottom:.45rem;">Preparing for Your Visit</h3>
+        <p style="color:var(--muted);margin-bottom:2.4rem;font-size:.9rem;">A little preparation helps us give you the best possible care.</p>
+        <div class="acc"><div class="acc-hd" onclick="ta(this)">For a General Consultation <span class="acc-icon">+</span></div><div class="acc-bd"><p>Write down your symptoms, when they started, and any medications you currently take. Bring any previous test results or doctor's reports.</p></div></div>
+        <div class="acc"><div class="acc-hd" onclick="ta(this)">For Laboratory Tests <span class="acc-icon">+</span></div><div class="acc-bd"><p>Some blood tests require fasting for 8–12 hours. Your referring doctor will specify if this applies. Drink plenty of water unless told otherwise.</p></div></div>
+        <div class="acc"><div class="acc-hd" onclick="ta(this)">For Antenatal (ANC) Appointments <span class="acc-icon">+</span></div><div class="acc-bd"><p>Bring your ANC card if you have one. Wear comfortable clothing. A support person is welcome to accompany you.</p></div></div>
+        <div class="acc"><div class="acc-hd" onclick="ta(this)">For Surgical Procedures <span class="acc-icon">+</span></div><div class="acc-bd"><p>Follow pre-operative instructions from your surgeon. Generally, avoid food and drink for 6–8 hours beforehand. Arrange for someone to accompany you.</p></div></div>
+        <div class="acc"><div class="acc-hd" onclick="ta(this)">For Paediatric Visits <span class="acc-icon">+</span></div><div class="acc-bd"><p>Bring your child's immunization card and health records. Note symptoms clearly. A familiar toy can help keep the child calm.</p></div></div>
+      </div>
+    </div>
+  </section>
+</div>

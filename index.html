@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hellena Hospital – To Improve Quality of Life</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" onclick="showPage('home')">
+    <div class="nav-caduceus"><img src="/images/logo.png" alt="Hellena Hospital Logo" style="width:40px;height:40px;object-fit:contain;filter:drop-shadow(0 0 8px rgba(200,146,42,0.4)) drop-shadow(0 0 4px rgba(139,0,0,0.2));"></div>
+    <span class="nav-logo-text"><em>Hellena</em> Hospital</span>
+  </a>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
+    <li><a onclick="showPage('about')" id="nav-about">About</a></li>
+    <li><a onclick="showPage('services')" id="nav-services">Services</a></li>
+    <li><a onclick="showPage('facilities')" id="nav-facilities">Facilities</a></li>
+    <li><a onclick="showPage('patient')" id="nav-patient">Patient Info</a></li>
+    <li><a onclick="showPage('blog')" id="nav-blog">Health Tips</a></li>
+    <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="nav-emg" onclick="showPage('emergency')"><i class="fas fa-bell"></i> Emergency</button>
+    <button class="nav-cta" onclick="showPage('contact')">Book Appointment</button>
+  </div>
+</nav>
+
+<!-- PAGES CONTAINER -->
+<!-- Each page is included from the pages/ folder -->
+<div id="pages-container">
+  <!-- Pages will be loaded here -->
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-cols">
+      <div>
+        <div class="fb-logo"><img src="/images/logo.png" alt="Hellena Hospital Logo" style="width:32px;height:32px;object-fit:contain;vertical-align:middle;margin-right:8px;filter:drop-shadow(0 0 6px rgba(200,146,42,0.3)) drop-shadow(0 0 3px rgba(139,0,0,0.15));"><em>Hellena</em> Hospital</div>
+        <div class="fb-tag">…To Improve Quality of Life</div>
+        <p class="fb-about">Providing compassionate, comprehensive healthcare to the people of Aba and Abia State. RC: 7061083.</p>
+        <div class="fb-emg"><strong><i class="fas fa-bell"></i> 24/7 Emergency Lines</strong>+2349164474223 · +2348026269356</div>
+      </div>
+      <div class="fc"><h5>Navigate</h5><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('services')">Services</a></li><li><a onclick="showPage('facilities')">Facilities</a></li><li><a onclick="showPage('patient')">Patient Info</a></li><li><a onclick="showPage('blog')">Health Tips</a></li><li><a onclick="showPage('emergency')">Emergency</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div class="fc"><h5>Services</h5><ul><li><a onclick="showPage('services')">Surgery</a></li><li><a onclick="showPage('services')">Paediatrics</a></li><li><a onclick="showPage('services')">ANC & Delivery</a></li><li><a onclick="showPage('services')">Immunization</a></li><li><a onclick="showPage('services')">Family Planning</a></li><li><a onclick="showPage('services')">HIV/AIDS Counseling</a></li><li><a onclick="showPage('services')">Laboratory</a></li><li><a onclick="showPage('services')">Geriatric Care</a></li></ul></div>
+      <div class="fc"><h5>Location</h5><div style="font-size:.85rem;line-height:1.9;margin-bottom:1.1rem;"><div><i class="fas fa-location-dot"></i> 60B Gas Line, Ohuru Isimiri</div><div>Before Malting-Plant, Ogbor-Hill</div><div>Aba, Abia State, Nigeria</div></div><div style="margin-top:.7rem;font-size:.8rem;line-height:1.9;color:rgba(255,255,255,0.35);"><div>Open 24 Hours Daily</div><div>RC: 7061083</div></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Hellena Hospital. All rights reserved. RC: 7061083</span><span>60B Gas Line, Ohuru Isimiri, Aba, Abia State, Nigeria</span></div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+// Load all pages on document ready
+document.addEventListener('DOMContentLoaded', async function() {
+  const pages = ['home', 'about', 'services', 'facilities', 'patient', 'blog', 'emergency', 'contact'];
+  const container = document.getElementById('pages-container');
+  
+  for (const page of pages) {
+    try {
+      const response = await fetch(`pages/${page}.html`);
+      const html = await response.text();
+      container.insertAdjacentHTML('beforeend', html);
+    } catch (error) {
+      console.error(`Failed to load page: ${page}`, error);
+    }
+  }
+  
+  // Show home page by default
+  showPage('home');
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!-- ══════════════════════════
+     HOME PAGE
+══════════════════════════ -->
+<div class="page active" id="page-home">
+  <section class="hero" style="padding:0;">
+    <div class="hero-left">
+      <div class="hero-tag">Abia State's Premier Healthcare</div>
+      <h1>Caring for Lives,<span>One Patient at a Time</span></h1>
+      <p class="hero-sub">Hellena Hospital delivers world-class medical care in the heart of Aba — from surgery to paediatrics, ANC/delivery to full diagnostics, all under one roof.</p>
+      <div class="hero-btns">
+        <button class="btn-gold" onclick="showPage('services')">Our Services</button>
+        <button class="btn-ol" onclick="showPage('contact')">Book Appointment</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Medical Services</div></div>
+        <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Emergency Care</div></div>
+        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Committed to Quality</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <!-- 🖼️ IMAGE PLACEHOLDER: Hero Main Image -->
+      <img src="/images/heromain.jpeg" alt="Hellena Hospital" style="background:#ddd;display:flex;align-items:center;justify-content:center;color:#666;font-weight:bold;">
+      <div class="hero-badge"><strong>…To Improve Quality of Life</strong><span>Our Core Mission</span></div>
+    </div>
+  </section>
+
+  <div class="quick-strip">
+    <div class="container">
+      <div class="qs-grid">
+        <div class="qs-card" onclick="showPage('services')"><span class="qs-icon"><i class="fas fa-flask"></i></span><h4>Surgery</h4><p>All surgical types</p></div>
+        <div class="qs-card" onclick="showPage('services')"><span class="qs-icon"><i class="fas fa-baby"></i></span><h4>Paediatrics</h4><p>Child healthcare</p></div>
+        <div class="qs-card" onclick="showPage('services')"><span class="qs-icon"><i class="fas fa-person-breastfeeding"></i></span><h4>ANC & Delivery</h4><p>Maternity services</p></div>
+        <div class="qs-card" onclick="showPage('services')"><span class="qs-icon"><i class="fas fa-flask-vial"></i></span><h4>Laboratory</h4><p>Full diagnostics</p></div>
+        <div class="qs-card" onclick="showPage('emergency')"><span class="qs-icon"><i class="fas fa-truck-medical"></i></span><h4>Emergency</h4><p>24/7 urgent care</p></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="why">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-img">
+          <!-- 🖼️ IMAGE PLACEHOLDER: Why Choose Us Section -->
+          <img src="/images/why-us.jpeg" alt="Hellena Hospital team" style="background:#ddd;display:flex;align-items:center;justify-content:center;color:#666;font-weight:bold;">
+          <div class="why-badge"><strong>RC</strong><span>7061083 · Fully Registered</span></div>
+        </div>
+        <div>
+          <span class="section-label">Why Choose Us</span>
+          <h2 class="section-title">Healthcare You Can <span>Trust & Rely On</span></h2>
+          <div class="why-points">
+            <div class="why-point"><div class="wcheck">✓</div><div><h4>Modern Multi-Storey Facility</h4><p>Purpose-built, multi-floor hospital equipped with modern medical infrastructure across every department.</p></div></div>
+            <div class="why-point"><div class="wcheck">✓</div><div><h4>Comprehensive Services Under One Roof</h4><p>Surgery, paediatrics, laboratory, ANC — every care you need is available without leaving the building.</p></div></div>
+            <div class="why-point"><div class="wcheck">✓</div><div><h4>Dedicated, Compassionate Staff</h4><p>Our team treats every patient with dignity, warmth, and clinical excellence at every interaction.</p></div></div>
+            <div class="why-point"><div class="wcheck">✓</div><div><h4>24-Hour Emergency Services</h4><p>Our emergency team is on standby around the clock, every single day of the year, without exception.</p></div></div>
+          </div>
+          <div style="margin-top:1.8rem;display:flex;gap:.9rem;">
+            <button class="btn-gold" onclick="showPage('about')">Learn More</button>
+            <button class="btn-ol-dark" onclick="showPage('contact')">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div style="text-align:center;max-width:500px;margin:0 auto;">
+        <span class="section-label" style="justify-content:center;">Patient Stories</span>
+        <h2 class="section-title">What Our <span>Patients Say</span></h2>
+      </div>
+      <div class="test-grid">
+        <div class="test-card"><div class="test-stars">★★★★★</div><p>"The care at Hellena Hospital was exceptional. From arrival, the nurses and doctors made me feel at ease. The facility is clean and well-equipped."</p><div class="test-author"><div class="test-av">A</div><div><strong>Adaeze Okonkwo</strong><span>Maternity Patient, Aba</span></div></div></div>
+        <div class="test-card"><div class="test-stars">★★★★★</div><p>"My son was admitted for a paediatric emergency and the team responded so quickly. The doctors were professional and the equipment was top-notch."</p><div class="test-author"><div class="test-av">C</div><div><strong>Chukwuemeka Eze</strong><span>Parent, Abia State</span></div></div></div>
+        <div class="test-card"><div class="test-stars">★★★★☆</div><p>"I came for laboratory tests and the process was smooth and fast. Results were accurate and the staff were very courteous. Highly recommend!"</p><div class="test-author"><div class="test-av">N</div><div><strong>Ngozi Amadi</strong><span>Lab Patient, Aba</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Need Medical Attention? <em style="color:var(--gold);font-style:normal;">We're Here.</em></h2>
+      <p>Walk in, call ahead, or book an appointment. Our team is ready 24 hours a day, 7 days a week.</p>
+      <div class="cta-btns"><button class="btn-gold" onclick="showPage('contact')">Book an Appointment</button><button class="btn-ol" onclick="showPage('emergency')">Emergency Contacts</button></div>
+    </div>
+  </div>
+</div>
