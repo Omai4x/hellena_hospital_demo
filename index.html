@@ -24,20 +24,28 @@
     <div class="nav-caduceus"><img src="/images/logo.png" alt="Hellena Hospital Logo" style="width:40px;height:40px;object-fit:contain;filter:drop-shadow(0 0 8px rgba(200,146,42,0.4)) drop-shadow(0 0 4px rgba(139,0,0,0.2));"></div>
     <span class="nav-logo-text"><em>Hellena</em> Hospital</span>
   </a>
-  <button class="nav-burger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
-  <ul class="nav-links" id="nav-links">
-    <li><a onclick="showPage('home'); toggleMenu();" id="nav-home" class="active">Home</a></li>
-    <li><a onclick="showPage('about'); toggleMenu();" id="nav-about">About</a></li>
-    <li><a onclick="showPage('services'); toggleMenu();" id="nav-services">Services</a></li>
-    <li><a onclick="showPage('facilities'); toggleMenu();" id="nav-facilities">Facilities</a></li>
-    <li><a onclick="showPage('patient'); toggleMenu();" id="nav-patient">Patient Info</a></li>
-    <li><a onclick="showPage('blog'); toggleMenu();" id="nav-blog">Health Tips</a></li>
-    <li><a onclick="showPage('contact'); toggleMenu();" id="nav-contact">Contact</a></li>
-  </ul>
-  <div class="nav-actions">
+  <div class="nav-menu-wrapper" id="nav-menu-wrapper">
+    <ul class="nav-links" id="nav-links">
+      <li><a onclick="showPage('home'); toggleMenu();" id="nav-home" class="active">Home</a></li>
+      <li><a onclick="showPage('about'); toggleMenu();" id="nav-about">About</a></li>
+      <li><a onclick="showPage('services'); toggleMenu();" id="nav-services">Services</a></li>
+      <li><a onclick="showPage('facilities'); toggleMenu();" id="nav-facilities">Facilities</a></li>
+      <li><a onclick="showPage('patient'); toggleMenu();" id="nav-patient">Patient Info</a></li>
+      <li><a onclick="showPage('blog'); toggleMenu();" id="nav-blog">Health Tips</a></li>
+      <li><a onclick="showPage('contact'); toggleMenu();" id="nav-contact">Contact</a></li>
+      <li class="mobile-actions">
+        <button class="nav-emg" onclick="showPage('emergency'); toggleMenu();"><i class="fas fa-bell"></i> Emergency</button>
+      </li>
+      <li class="mobile-actions">
+        <button class="nav-cta" onclick="showPage('contact'); toggleMenu();">Book Appointment</button>
+      </li>
+    </ul>
+  </div>
+  <div class="nav-actions" id="desktop-actions">
     <button class="nav-emg" onclick="showPage('emergency')"><i class="fas fa-bell"></i> Emergency</button>
     <button class="nav-cta" onclick="showPage('contact')">Book Appointment</button>
   </div>
+  <button class="nav-burger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
 </nav>
 
 <!-- PAGES CONTAINER -->
@@ -77,9 +85,9 @@ function hideLoadingScreen() {
 
 // Toggle mobile menu
 function toggleMenu() {
-  const links = document.getElementById('nav-links');
-  if (links) {
-    links.classList.toggle('active');
+  const wrapper = document.getElementById('nav-menu-wrapper');
+  if (wrapper) {
+    wrapper.classList.toggle('active');
   }
 }
 
