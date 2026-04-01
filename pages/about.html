@@ -53,6 +53,321 @@
     </div>
   </section>
 
+
+  <!-- ══════════════════════════════════════════
+       FOUNDER SECTION
+  ══════════════════════════════════════════ -->
+  <section class="founder-section">
+    <div class="container">
+
+      <div class="founder-grid">
+
+        <!-- Photo column -->
+        <div class="founder-photo-col">
+          <div class="founder-photo-wrap">
+            <!-- 🖼️ Replace src with the founder's actual photo path -->
+            <img
+              src="images/founder.jpg"
+              alt="Founder of Hellena Hospital"
+              class="founder-photo"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            >
+            <!-- Fallback shown if photo not yet added -->
+            <div class="founder-photo-fallback" style="display:none;">
+              <i class="fas fa-user-tie"></i>
+            </div>
+
+            <!-- Decorative frame accent -->
+            <div class="founder-frame-accent"></div>
+
+            <!-- Gold corner badge -->
+            <div class="founder-badge">
+              <i class="fas fa-star"></i>
+              <span>Founder</span>
+            </div>
+          </div>
+
+          <!-- Signature block under photo -->
+          <div class="founder-sig">
+            <div class="founder-sig-line"></div>
+            <span class="founder-sig-label">Hellena Hospital, Aba</span>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="founder-text-col">
+          <span class="section-label"><i class="fas fa-award"></i> Our Founder</span>
+          <h2 class="section-title founder-name-heading">
+            <!-- 📝 Replace with founder's full name -->
+            <span>[Founder's Full Name]</span>
+          </h2>
+          <p class="founder-title-line">
+            <i class="fas fa-stethoscope"></i>
+            <!-- 📝 Replace with founder's title / credentials -->
+            Founder &amp; Medical Director, Hellena Hospital
+          </p>
+
+          <blockquote class="founder-quote">
+            "Healthcare is not a privilege — it is a right. Hellena Hospital was built on the belief that every person in Aba and Abia State deserves compassionate, world-class medical care, close to home."
+          </blockquote>
+
+          <p class="founder-bio">
+            <!-- 📝 Replace this paragraph with the founder's actual biography -->
+            Hellena Hospital was born from one person's unwavering conviction that the people of Ogbor-Hill — and all of Aba — deserved better. Our founder, driven by years of medical practice and a deep love for this community, established Hellena Hospital with a singular mission: <strong>To Improve Quality of Life</strong>.
+          </p>
+          <p class="founder-bio">
+            From a vision conceived in dedication and faith, the hospital grew into a fully equipped, multi-floor medical facility offering surgery, maternity care, paediatrics, diagnostics, and more — all under one roof. Every ward, every piece of equipment, and every member of staff reflects the founder's insistence on excellence without compromise.
+          </p>
+          <p class="founder-bio">
+            Today, Hellena Hospital stands as a testament to that founding spirit — a place where patients are treated as family, and where the community's health is always the highest priority.
+          </p>
+
+          <!-- Key achievements strip -->
+          <div class="founder-milestones">
+            <div class="founder-milestone">
+              <span class="fm-icon"><i class="fas fa-hospital"></i></span>
+              <div>
+                <strong>Founded</strong>
+                <span>Hellena Hospital, Aba</span>
+              </div>
+            </div>
+            <div class="founder-milestone">
+              <span class="fm-icon"><i class="fas fa-users-medical"></i></span>
+              <div>
+                <strong>Thousands Served</strong>
+                <span>Patients across Abia State</span>
+              </div>
+            </div>
+            <div class="founder-milestone">
+              <span class="fm-icon"><i class="fas fa-clock"></i></span>
+              <div>
+                <strong>24 / 7</strong>
+                <span>Commitment to community</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder section styles (scoped) -->
+  <style>
+  .founder-section {
+    background: var(--warm-white);
+    padding: 5.5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Subtle crimson arc in the background */
+  .founder-section::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 460px; height: 460px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139,0,0,0.045) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Two-column grid */
+  .founder-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  /* ── Photo column ── */
+  .founder-photo-col {
+    position: sticky;
+    top: calc(var(--nav-h) + 2rem);
+  }
+  .founder-photo-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  .founder-photo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 4px;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  /* Fallback placeholder when no photo */
+  .founder-photo-fallback {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: linear-gradient(135deg, #2a0a0a, #5a1a1a);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: rgba(200,146,42,0.4);
+    z-index: 1;
+    position: relative;
+  }
+
+  /* Decorative offset frame */
+  .founder-frame-accent {
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--gold);
+    border-radius: 4px;
+    transform: translate(12px, 12px);
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  /* Founder badge bottom-right of photo */
+  .founder-badge {
+    position: absolute;
+    bottom: 1.4rem;
+    right: -0.6rem;
+    z-index: 2;
+    background: var(--crimson);
+    color: #fff;
+    padding: .55rem 1.1rem .55rem .85rem;
+    border-radius: 2px 0 0 2px;
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    box-shadow: -4px 4px 18px rgba(139,0,0,0.35);
+  }
+  .founder-badge i { color: var(--gold); font-size: .75rem; }
+
+  /* Signature strip under photo */
+  .founder-sig {
+    margin-top: 1.6rem;
+    text-align: center;
+  }
+  .founder-sig-line {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, var(--crimson), var(--gold));
+    margin: 0 auto .6rem;
+    border-radius: 2px;
+  }
+  .founder-sig-label {
+    font-size: .75rem;
+    color: var(--muted);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  /* ── Text column ── */
+  .founder-name-heading {
+    font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+    margin-bottom: .5rem;
+    margin-top: .3rem;
+  }
+  .founder-title-line {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    color: var(--crimson);
+    font-size: .88rem;
+    font-weight: 600;
+    margin-bottom: 1.8rem;
+    letter-spacing: .02em;
+  }
+  .founder-title-line i { font-size: .82rem; }
+
+  /* Pull quote */
+  .founder-quote {
+    border-left: 3px solid var(--gold);
+    margin: 0 0 1.8rem;
+    padding: .9rem 1.4rem;
+    background: rgba(200,146,42,0.06);
+    border-radius: 0 4px 4px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.02rem;
+    color: var(--deep);
+    line-height: 1.7;
+  }
+
+  /* Bio paragraphs */
+  .founder-bio {
+    color: var(--muted);
+    font-size: .93rem;
+    line-height: 1.85;
+    margin-bottom: 1rem;
+  }
+  .founder-bio strong { color: var(--deep); }
+
+  /* Milestones strip */
+  .founder-milestones {
+    display: flex;
+    gap: 0;
+    margin-top: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .founder-milestone {
+    flex: 1;
+    padding: 1.1rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    background: var(--cream);
+    border-right: 1px solid var(--border);
+  }
+  .founder-milestone:last-child { border-right: none; }
+  .fm-icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(139,0,0,0.1);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--crimson);
+    font-size: .95rem;
+    flex-shrink: 0;
+  }
+  .founder-milestone strong {
+    display: block;
+    font-size: .82rem;
+    font-weight: 700;
+    color: var(--deep);
+    line-height: 1.2;
+  }
+  .founder-milestone span {
+    font-size: .72rem;
+    color: var(--muted);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 1023px) {
+    .founder-grid { grid-template-columns: 300px 1fr; gap: 3.5rem; }
+  }
+  @media (max-width: 899px) {
+    .founder-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .founder-photo-col { position: static; display: flex; flex-direction: column; align-items: center; }
+    .founder-photo-wrap { max-width: 320px; width: 100%; }
+    .founder-quote { font-size: .95rem; }
+    .founder-milestones { flex-wrap: wrap; }
+    .founder-milestone { min-width: calc(50% - 1px); }
+  }
+  @media (max-width: 480px) {
+    .founder-section { padding: 3.5rem 0; }
+    .founder-photo-wrap { max-width: 260px; }
+    .founder-milestones { flex-direction: column; }
+    .founder-milestone { border-right: none; border-bottom: 1px solid var(--border); }
+    .founder-milestone:last-child { border-bottom: none; }
+    .founder-quote { font-size: .88rem; padding: .75rem 1rem; }
+    .founder-bio { font-size: .88rem; }
+  }
+  </style>
+
   <section style="background:var(--deep);padding:5rem 0;">
     <div class="container">
       <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.8rem;flex-wrap:wrap;gap:1rem;">
