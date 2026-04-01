@@ -117,47 +117,6 @@
   </div>
 </footer>
 
-<!-- ══════════════════════════════════════════
-     HELLENA HOSPITAL CHATBOT
-══════════════════════════════════════════ -->
-
-<!-- Launcher FAB -->
-<button id="chat-fab" aria-label="Chat with Hellena Assistant" onclick="chatToggle()">
-  <span class="chat-fab-icon" id="chat-fab-icon"><i class="fas fa-comment-medical"></i></span>
-  <span class="chat-fab-close" id="chat-fab-close" style="display:none;"><i class="fas fa-times"></i></span>
-  <span class="chat-fab-pulse"></span>
-</button>
-
-<!-- Chat Window -->
-<div id="chat-window" role="dialog" aria-label="Hellena Hospital Assistant" aria-hidden="true">
-  <div class="chat-header">
-    <div class="chat-header-left">
-      <div class="chat-avatar"><img src="images/logo.png" alt="Hellena"></div>
-      <div>
-        <div class="chat-name">Hellena Assistant</div>
-        <div class="chat-status"><span class="chat-dot"></span> Online &middot; Hellena Hospital</div>
-      </div>
-    </div>
-    <div class="chat-header-right">
-      <button class="chat-hdr-btn" onclick="chatClear()" title="Clear chat" aria-label="Clear chat"><i class="fas fa-rotate-left"></i></button>
-      <button class="chat-hdr-btn" onclick="chatToggle()" title="Close" aria-label="Close chat"><i class="fas fa-times"></i></button>
-    </div>
-  </div>
-  <div class="chat-messages" id="chat-messages" role="log" aria-live="polite"></div>
-  <div class="chat-quick" id="chat-quick">
-    <button onclick="chatQuick(this)" data-q="What services do you offer?">Services</button>
-    <button onclick="chatQuick(this)" data-q="How do I book an appointment?">Appointments</button>
-    <button onclick="chatQuick(this)" data-q="What are your emergency numbers?">Emergency</button>
-    <button onclick="chatQuick(this)" data-q="Where are you located?">Location</button>
-    <button onclick="chatQuick(this)" data-q="What are your opening hours?">Hours</button>
-  </div>
-  <div class="chat-input-bar">
-    <textarea id="chat-input" class="chat-input" placeholder="Ask about services, appointments, location…" rows="1" aria-label="Type your message" onkeydown="chatKeydown(event)" oninput="chatAutoResize(this)"></textarea>
-    <button id="chat-send" class="chat-send-btn" onclick="chatSend()" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
-  </div>
-  <div class="chat-footer-note">Powered by AI &middot; For emergencies call <a href="tel:+2349164474223">+234 916 447 4223</a></div>
-</div>
-
 <!-- ── Back to Top Button ── -->
 <button
   id="back-to-top"
